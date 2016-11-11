@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+	    <action name="timer" class="action.Timer">
+	    	<!-- action中加入对拦截器的引用，并指出拦截器的名称timer -->
+	    	<interceptor-ref name="timer"></interceptor-ref>
+	    	<result>/success.jsp</result>	    	
+	    </action>
+    </package>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+</struts>
